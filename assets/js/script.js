@@ -83,10 +83,18 @@ dental.forEach(myFunction);
 
 document.write('<h3>Ejercicio 5 por console.log</h3>');
 
+
+
+
 let previsionIsapreDental = dental.filter(function(m1){
     return m1.prevision == 'ISAPRE';
 });
 console.log(previsionIsapreDental); 
+
+previsionIsapreDental.forEach(n1 => {
+    let textoHTMLe = (`<p>${n1.paciente} - ${n1.prevision}</p>`) 
+    document.write(`<p>${textoHTMLe}</p>`);
+});
 
 //6
 
@@ -95,6 +103,12 @@ let previsionFonasaTrauma = traumatologia.filter(function(m1){
     return m1.prevision == 'FONASA';
 });
 console.log(previsionFonasaTrauma);
+
+previsionFonasaTrauma.forEach(n1 => {
+    let textoHTMLf = (`<p>${n1.paciente} - ${n1.prevision}</p>`) 
+    document.write(`<p>${textoHTMLf}</p>`);
+});
+
 
 document.write('<h3>Fin código desafío.</h3>');
 
