@@ -1,4 +1,4 @@
-//document.write('<p>Estadisticas centro medico ñuñoa</p>');
+document.write('<p>Estadisticas Centro Médico Ñuñoa</p>');
 
 let radiologia = [
     {hora: '11:00', especialista: 'IGNACIO SCHULZ', paciente: 'FRANCISCA ROJAS', rut: '9878782-1', prevision: 'FONASA'},
@@ -32,7 +32,10 @@ let dental = [
 
 // 1. Agregar las siguientes horas
 // Se utiliza splice para agregar los objetos respetando el orden de horario.
-/* traumatologia.splice(1,0,
+
+document.write('<h3>Ejercicio 1 por console.log</h3>');
+
+traumatologia.splice(1,0,
     {hora: '09:00', especialista: 'RENÉ POBLETE', paciente: 'ANA GELLONA',  rut: '13123329-7', prevision: 'ISAPRE'},)
 traumatologia.splice(2,0,   
     {hora: '09:30', especialista: 'MARIA SOLAR', paciente: 'RAMIRO ANDRADE',  rut: '12221451-K', prevision: 'FONASA'},
@@ -44,51 +47,60 @@ traumatologia.splice(5,0,
 
 traumatologia.splice(9,0,
     {hora: '12:00', especialista: 'MATIAS ARAVENA', paciente: 'SUSANA POBLETE',  rut: '14345656-6', prevision: 'FONASA'},);
-console.log(traumatologia);  */
+console.log(traumatologia);  
 
 //2. Eliminar el primer y último elemento del arreglo de Radiología.
-/* let primero = 1;
+
+document.write('<h3>Ejercicio 2 por console.log</h3>');
+
+ let primero = 1;
 radiologia.splice(0,primero)
 let ultimo = radiologia.length-1;
 radiologia.splice(ultimo,1)
-console.log(radiologia) */
+console.log(radiologia) 
 
 //3 Imprimir en la página HTML
-/* dental.forEach(n1 => {
+document.write('<h3>Ejercicio 3: </h3>');
+
+dental.forEach(n1 => {
     let textoHTMLc = (`<p>${n1.hora} - ${n1.especialista} - ${n1.paciente} - ${n1.rut} - ${n1.prevision}</p>`) 
     document.write(`<p>${textoHTMLc}</p>`);
 });
 
 //4  Listado total de todos los pacientes
+document.write('<h3>Ejercicio 4: </h3>');
 
 function myFunction(n1) {
     document.write((`<p>${n1.paciente}</p>`))
 };
 
-radiologia.forEach(myFunction)
-traumatologia.forEach(myFunction)
-dental.forEach(myFunction)
- */
+radiologia.forEach(myFunction);
+traumatologia.forEach(myFunction);
+dental.forEach(myFunction);
+
+
 //5
 
-let previsionIsapreRadio = radiologia.filter(function(m1){
-    return m1.prevision == 'ISAPRE';
-});
-console.log(previsionIsapreRadio);
-
-let previsionIsapreTrauma = traumatologia.filter(function(m1){
-    return m1.prevision == 'ISAPRE';
-});
-console.log(previsionIsapreTrauma);
+document.write('<h3>Ejercicio 5 por console.log</h3>');
 
 let previsionIsapreDental = dental.filter(function(m1){
     return m1.prevision == 'ISAPRE';
 });
-console.log(previsionIsapreDental);
+console.log(previsionIsapreDental); 
+
+//6
+
+document.write('<h3>Ejercicio 6 por console.log</h3>');
+let previsionFonasaTrauma = traumatologia.filter(function(m1){
+    return m1.prevision == 'FONASA';
+});
+console.log(previsionFonasaTrauma);
+
+document.write('<h3>Fin código desafío.</h3>');
 
 //Agregar código para el desafio 2 aquí
  
-/* document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
+document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
 document.write(`<p>Cantidad de atenciones para Traumatología: ${traumatologia.length}</p>`);
 document.write(`<p>Cantidad de atenciones para Dental: ${dental.length}</p>`);
 
@@ -96,4 +108,3 @@ document.write(`<p>Cantidad de atenciones para Dental: ${dental.length}</p>`);
 document.write(`<p>Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length -1].paciente} - ${radiologia[radiologia.length -1].prevision}.</p>`);
 document.write(`<p>Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length -1].paciente} - ${traumatologia[traumatologia.length -1].prevision}.</p>`);
 document.write(`<p>Primera atencion: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length -1].paciente} - ${dental[dental.length -1].prevision}.</p>`);
- */
